@@ -4,6 +4,16 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
+public class favicons
+{
+    [JsonProperty("rel")]
+    public string rel { get; set; }
+
+    [JsonProperty("href")]
+    public string href { get; set; }
+
+}
+
 public class founder
 {
     [JsonProperty("@type")]
@@ -143,19 +153,57 @@ public class jsonld
 
 }
 
+public class headings
+{
+    [JsonProperty("level")]
+    public string level { get; set; }
+
+    [JsonProperty("text")]
+    public string text { get; set; }
+
+}
+
+public class imgTags
+{
+    [JsonProperty("src")]
+    public string src { get; set; }
+
+    [JsonProperty("alt")]
+    public string alt { get; set; }
+
+    [JsonProperty("width")]
+    public string width { get; set; }
+
+    [JsonProperty("height")]
+    public string height { get; set; }
+
+}
+
 public class data
 {
+    [JsonProperty("requestUrl")]
+    public string requestUrl { get; set; }
+
     [JsonProperty("url")]
     public string url { get; set; }
 
     [JsonProperty("canonical")]
     public string canonical { get; set; }
 
+    [JsonProperty("lang")]
+    public string lang { get; set; }
+
+    [JsonProperty("charset")]
+    public string charset { get; set; }
+
     [JsonProperty("title")]
     public string title { get; set; }
 
     [JsonProperty("image")]
     public string image { get; set; }
+
+    [JsonProperty("favicons")]
+    public favicons[] favicons { get; set; }
 
     [JsonProperty("author")]
     public string author { get; set; }
@@ -182,7 +230,7 @@ public class data
     public string robots { get; set; }
 
     [JsonProperty("jsonld")]
-    public jsonld jsonld { get; set; }
+    public jsonld[] jsonld { get; set; }
 
     [JsonProperty("og:url")]
     public string ogurl { get; set; }
@@ -295,17 +343,29 @@ public class data
     [JsonProperty("twitter:app:url:googleplay")]
     public string twitterappurlgoogleplay { get; set; }
 
+    [JsonProperty("headings")]
+    public headings[] headings { get; set; }
+
+    [JsonProperty("imgTags")]
+    public imgTags[] imgTags { get; set; }
+
     [JsonProperty("responseBody")]
     public string responseBody { get; set; }
 
     [JsonProperty("viewport")]
     public string viewport { get; set; }
 
+    [JsonProperty("X-UA-Compatible")]
+    public string xUACompatible { get; set; }
+
     [JsonProperty("360-site-verification")]
     public string 360siteverification { get; set; }
 
     [JsonProperty("fb:app_id")]
     public string fbappid { get; set; }
+
+    [JsonProperty("content-language")]
+    public string contentlanguage { get; set; }
 
     [JsonProperty("msvalidate.01")]
     public string msvalidate01 { get; set; }
