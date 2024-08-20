@@ -171,12 +171,6 @@ public class imgTags
     [JsonProperty("alt")]
     public string alt { get; set; }
 
-    [JsonProperty("width")]
-    public string width { get; set; }
-
-    [JsonProperty("height")]
-    public string height { get; set; }
-
 }
 
 public class data
@@ -394,6 +388,9 @@ public class ResponseObj
 
     [JsonProperty("data")]
     public data data { get; set; }
+
+    [JsonProperty("code")]
+    public int code { get; set; }
 
 }
 
