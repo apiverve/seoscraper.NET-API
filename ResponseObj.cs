@@ -171,6 +171,12 @@ public class imgTags
     [JsonProperty("alt")]
     public string alt { get; set; }
 
+    [JsonProperty("width")]
+    public string width { get; set; }
+
+    [JsonProperty("height")]
+    public string height { get; set; }
+
 }
 
 public class data
@@ -372,6 +378,9 @@ public class data
 
     [JsonProperty("google-site-verification")]
     public string googlesiteverification { get; set; }
+
+    [JsonProperty("google-adsense-account")]
+    public string googleadsenseaccount { get; set; }
 
     [JsonProperty("yandex-verification")]
     public string yandexverification { get; set; }
