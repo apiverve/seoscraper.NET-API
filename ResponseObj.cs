@@ -171,12 +171,6 @@ public class imgTags
     [JsonProperty("alt")]
     public string alt { get; set; }
 
-    [JsonProperty("width")]
-    public string width { get; set; }
-
-    [JsonProperty("height")]
-    public string height { get; set; }
-
 }
 
 public class data
@@ -363,9 +357,6 @@ public class data
 
     [JsonProperty("fb:app_id")]
     public string fbappid { get; set; }
-
-    [JsonProperty("content-language")]
-    public string contentlanguage { get; set; }
 
     [JsonProperty("msvalidate.01")]
     public string msvalidate01 { get; set; }
