@@ -4,394 +4,415 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class favicons
-{
-    [JsonProperty("rel")]
-    public string rel { get; set; }
+    /// <summary>
+    /// Favicons data
+    /// </summary>
+    public class Favicons
+    {
+        [JsonProperty("rel")]
+        public string Rel { get; set; }
+
+        [JsonProperty("href")]
+        public string Href { get; set; }
+
+    }
+    /// <summary>
+    /// Founder data
+    /// </summary>
+    public class Founder
+    {
+        [JsonProperty("@type")]
+        public string Type { get; set; }
+
+        [JsonProperty("@id")]
+        public string Id { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+    }
+    /// <summary>
+    /// AvailableLanguage data
+    /// </summary>
+    public class AvailableLanguage
+    {
+        [JsonProperty("@type")]
+        public string Type { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("alternateName")]
+        public string AlternateName { get; set; }
+
+    }
+    /// <summary>
+    /// ContactPoint data
+    /// </summary>
+    public class ContactPoint
+    {
+        [JsonProperty("@type")]
+        public string Type { get; set; }
+
+        [JsonProperty("availableLanguage")]
+        public AvailableLanguage[] AvailableLanguage { get; set; }
+
+        [JsonProperty("contactOption")]
+        public string ContactOption { get; set; }
+
+        [JsonProperty("contactType")]
+        public string ContactType { get; set; }
+
+        [JsonProperty("telephone")]
+        public string Telephone { get; set; }
+
+    }
+    /// <summary>
+    /// Author data
+    /// </summary>
+    public class Author
+    {
+        [JsonProperty("@type")]
+        public string Type { get; set; }
+
+        [JsonProperty("@id")]
+        public string Id { get; set; }
+
+        [JsonProperty("url")]
+        public string Url { get; set; }
+
+        [JsonProperty("logo")]
+        public string Logo { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("founder")]
+        public Founder Founder { get; set; }
+
+        [JsonProperty("foundingDate")]
+        public string FoundingDate { get; set; }
+
+        [JsonProperty("foundingLocation")]
+        public string FoundingLocation { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("legalName")]
+        public string LegalName { get; set; }
+
+        [JsonProperty("contactPoint")]
+        public ContactPoint ContactPoint { get; set; }
+
+    }
+    /// <summary>
+    /// PotentialAction data
+    /// </summary>
+    public class PotentialAction
+    {
+        [JsonProperty("@type")]
+        public string Type { get; set; }
+
+        [JsonProperty("target")]
+        public string Target { get; set; }
+
+        [JsonProperty("query-input")]
+        public string Queryinput { get; set; }
+
+    }
+    /// <summary>
+    /// IsPartOf data
+    /// </summary>
+    public class IsPartOf
+    {
+        [JsonProperty("@type")]
+        public string Type { get; set; }
+
+        [JsonProperty("@id")]
+        public string Id { get; set; }
+
+        [JsonProperty("url")]
+        public string Url { get; set; }
+
+        [JsonProperty("potentialAction")]
+        public PotentialAction PotentialAction { get; set; }
+
+    }
+    /// <summary>
+    /// Jsonld data
+    /// </summary>
+    public class Jsonld
+    {
+        [JsonProperty("@context")]
+        public string Context { get; set; }
 
-    [JsonProperty("href")]
-    public string href { get; set; }
+        [JsonProperty("@type")]
+        public string Type { get; set; }
 
-}
+        [JsonProperty("@id")]
+        public string Id { get; set; }
 
-public class founder
-{
-    [JsonProperty("@type")]
-    public string type { get; set; }
+        [JsonProperty("url")]
+        public string Url { get; set; }
 
-    [JsonProperty("@id")]
-    public string id { get; set; }
+        [JsonProperty("author")]
+        public Author Author { get; set; }
 
-    [JsonProperty("name")]
-    public string name { get; set; }
+        [JsonProperty("isPartOf")]
+        public IsPartOf IsPartOf { get; set; }
 
-}
+        [JsonProperty("inLanguage")]
+        public string InLanguage { get; set; }
 
-public class availableLanguage
-{
-    [JsonProperty("@type")]
-    public string type { get; set; }
+        [JsonProperty("sameAs")]
+        public string[] SameAs { get; set; }
 
-    [JsonProperty("name")]
-    public string name { get; set; }
+    }
+    /// <summary>
+    /// Headings data
+    /// </summary>
+    public class Headings
+    {
+        [JsonProperty("level")]
+        public string Level { get; set; }
 
-    [JsonProperty("alternateName")]
-    public string alternateName { get; set; }
+        [JsonProperty("text")]
+        public string Text { get; set; }
 
-}
+    }
+    /// <summary>
+    /// ImgTags data
+    /// </summary>
+    public class ImgTags
+    {
+        [JsonProperty("src")]
+        public string Src { get; set; }
 
-public class contactPoint
-{
-    [JsonProperty("@type")]
-    public string type { get; set; }
+        [JsonProperty("alt")]
+        public string Alt { get; set; }
 
-    [JsonProperty("availableLanguage")]
-    public availableLanguage[] availableLanguage { get; set; }
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("requestUrl")]
+        public string RequestUrl { get; set; }
 
-    [JsonProperty("contactOption")]
-    public string contactOption { get; set; }
+        [JsonProperty("url")]
+        public string Url { get; set; }
 
-    [JsonProperty("contactType")]
-    public string contactType { get; set; }
+        [JsonProperty("canonical")]
+        public string Canonical { get; set; }
 
-    [JsonProperty("telephone")]
-    public string telephone { get; set; }
+        [JsonProperty("lang")]
+        public string Lang { get; set; }
 
-}
+        [JsonProperty("charset")]
+        public string Charset { get; set; }
 
-public class author
-{
-    [JsonProperty("@type")]
-    public string type { get; set; }
+        [JsonProperty("title")]
+        public string Title { get; set; }
 
-    [JsonProperty("@id")]
-    public string id { get; set; }
+        [JsonProperty("image")]
+        public string Image { get; set; }
 
-    [JsonProperty("url")]
-    public string url { get; set; }
+        [JsonProperty("favicons")]
+        public Favicons[] Favicons { get; set; }
 
-    [JsonProperty("logo")]
-    public string logo { get; set; }
+        [JsonProperty("author")]
+        public string Author { get; set; }
 
-    [JsonProperty("description")]
-    public string description { get; set; }
+        [JsonProperty("description")]
+        public string Description { get; set; }
 
-    [JsonProperty("founder")]
-    public founder founder { get; set; }
+        [JsonProperty("keywords")]
+        public string Keywords { get; set; }
 
-    [JsonProperty("foundingDate")]
-    public string foundingDate { get; set; }
+        [JsonProperty("source")]
+        public string Source { get; set; }
 
-    [JsonProperty("foundingLocation")]
-    public string foundingLocation { get; set; }
+        [JsonProperty("price")]
+        public string Price { get; set; }
 
-    [JsonProperty("name")]
-    public string name { get; set; }
+        [JsonProperty("priceCurrency")]
+        public string PriceCurrency { get; set; }
 
-    [JsonProperty("legalName")]
-    public string legalName { get; set; }
+        [JsonProperty("availability")]
+        public string Availability { get; set; }
 
-    [JsonProperty("contactPoint")]
-    public contactPoint contactPoint { get; set; }
+        [JsonProperty("robots")]
+        public string Robots { get; set; }
 
-}
+        [JsonProperty("jsonld")]
+        public Jsonld[] Jsonld { get; set; }
 
-public class potentialAction
-{
-    [JsonProperty("@type")]
-    public string type { get; set; }
+        [JsonProperty("og:url")]
+        public string Ogurl { get; set; }
 
-    [JsonProperty("target")]
-    public string target { get; set; }
+        [JsonProperty("og:locale")]
+        public string Oglocale { get; set; }
 
-    [JsonProperty("query-input")]
-    public string queryinput { get; set; }
+        [JsonProperty("og:locale:alternate")]
+        public string Oglocalealternate { get; set; }
 
-}
+        [JsonProperty("og:title")]
+        public string Ogtitle { get; set; }
 
-public class isPartOf
-{
-    [JsonProperty("@type")]
-    public string type { get; set; }
+        [JsonProperty("og:type")]
+        public string Ogtype { get; set; }
 
-    [JsonProperty("@id")]
-    public string id { get; set; }
+        [JsonProperty("og:description")]
+        public string Ogdescription { get; set; }
 
-    [JsonProperty("url")]
-    public string url { get; set; }
+        [JsonProperty("og:determiner")]
+        public string Ogdeterminer { get; set; }
 
-    [JsonProperty("potentialAction")]
-    public potentialAction potentialAction { get; set; }
+        [JsonProperty("og:site_name")]
+        public string Ogsitename { get; set; }
 
-}
+        [JsonProperty("og:image")]
+        public string Ogimage { get; set; }
 
-public class jsonld
-{
-    [JsonProperty("@context")]
-    public string context { get; set; }
+        [JsonProperty("og:image:secure_url")]
+        public string Ogimagesecureurl { get; set; }
 
-    [JsonProperty("@type")]
-    public string type { get; set; }
+        [JsonProperty("og:image:type")]
+        public string Ogimagetype { get; set; }
 
-    [JsonProperty("@id")]
-    public string id { get; set; }
+        [JsonProperty("og:image:width")]
+        public string Ogimagewidth { get; set; }
 
-    [JsonProperty("url")]
-    public string url { get; set; }
+        [JsonProperty("og:image:height")]
+        public string Ogimageheight { get; set; }
 
-    [JsonProperty("author")]
-    public author author { get; set; }
+        [JsonProperty("twitter:title")]
+        public string Twittertitle { get; set; }
 
-    [JsonProperty("isPartOf")]
-    public isPartOf isPartOf { get; set; }
+        [JsonProperty("twitter:description")]
+        public string Twitterdescription { get; set; }
 
-    [JsonProperty("inLanguage")]
-    public string inLanguage { get; set; }
+        [JsonProperty("twitter:image")]
+        public string Twitterimage { get; set; }
 
-    [JsonProperty("sameAs")]
-    public string[] sameAs { get; set; }
+        [JsonProperty("twitter:image:alt")]
+        public string Twitterimagealt { get; set; }
 
-}
+        [JsonProperty("twitter:card")]
+        public string Twittercard { get; set; }
 
-public class headings
-{
-    [JsonProperty("level")]
-    public string level { get; set; }
+        [JsonProperty("twitter:site")]
+        public string Twittersite { get; set; }
 
-    [JsonProperty("text")]
-    public string text { get; set; }
+        [JsonProperty("twitter:site:id")]
+        public string Twittersiteid { get; set; }
 
-}
+        [JsonProperty("twitter:url")]
+        public string Twitterurl { get; set; }
 
-public class imgTags
-{
-    [JsonProperty("src")]
-    public string src { get; set; }
+        [JsonProperty("twitter:account_id")]
+        public string Twitteraccountid { get; set; }
 
-    [JsonProperty("alt")]
-    public string alt { get; set; }
+        [JsonProperty("twitter:creator")]
+        public string Twittercreator { get; set; }
 
-}
+        [JsonProperty("twitter:creator:id")]
+        public string Twittercreatorid { get; set; }
 
-public class data
-{
-    [JsonProperty("requestUrl")]
-    public string requestUrl { get; set; }
+        [JsonProperty("twitter:player")]
+        public string Twitterplayer { get; set; }
 
-    [JsonProperty("url")]
-    public string url { get; set; }
+        [JsonProperty("twitter:player:width")]
+        public string Twitterplayerwidth { get; set; }
 
-    [JsonProperty("canonical")]
-    public string canonical { get; set; }
+        [JsonProperty("twitter:player:height")]
+        public string Twitterplayerheight { get; set; }
 
-    [JsonProperty("lang")]
-    public string lang { get; set; }
+        [JsonProperty("twitter:player:stream")]
+        public string Twitterplayerstream { get; set; }
 
-    [JsonProperty("charset")]
-    public string charset { get; set; }
+        [JsonProperty("twitter:app:name:iphone")]
+        public string Twitterappnameiphone { get; set; }
 
-    [JsonProperty("title")]
-    public string title { get; set; }
+        [JsonProperty("twitter:app:id:iphone")]
+        public string Twitterappidiphone { get; set; }
 
-    [JsonProperty("image")]
-    public string image { get; set; }
+        [JsonProperty("twitter:app:url:iphone")]
+        public string Twitterappurliphone { get; set; }
 
-    [JsonProperty("favicons")]
-    public favicons[] favicons { get; set; }
+        [JsonProperty("twitter:app:name:ipad")]
+        public string Twitterappnameipad { get; set; }
 
-    [JsonProperty("author")]
-    public string author { get; set; }
+        [JsonProperty("twitter:app:id:ipad")]
+        public string Twitterappidipad { get; set; }
 
-    [JsonProperty("description")]
-    public string description { get; set; }
+        [JsonProperty("twitter:app:url:ipad")]
+        public string Twitterappurlipad { get; set; }
 
-    [JsonProperty("keywords")]
-    public string keywords { get; set; }
+        [JsonProperty("twitter:app:name:googleplay")]
+        public string Twitterappnamegoogleplay { get; set; }
 
-    [JsonProperty("source")]
-    public string source { get; set; }
+        [JsonProperty("twitter:app:id:googleplay")]
+        public string Twitterappidgoogleplay { get; set; }
 
-    [JsonProperty("price")]
-    public string price { get; set; }
+        [JsonProperty("twitter:app:url:googleplay")]
+        public string Twitterappurlgoogleplay { get; set; }
 
-    [JsonProperty("priceCurrency")]
-    public string priceCurrency { get; set; }
+        [JsonProperty("headings")]
+        public Headings[] Headings { get; set; }
 
-    [JsonProperty("availability")]
-    public string availability { get; set; }
+        [JsonProperty("imgTags")]
+        public ImgTags[] ImgTags { get; set; }
 
-    [JsonProperty("robots")]
-    public string robots { get; set; }
+        [JsonProperty("responseBody")]
+        public string ResponseBody { get; set; }
 
-    [JsonProperty("jsonld")]
-    public jsonld[] jsonld { get; set; }
+        [JsonProperty("viewport")]
+        public string Viewport { get; set; }
 
-    [JsonProperty("og:url")]
-    public string ogurl { get; set; }
+        [JsonProperty("X-UA-Compatible")]
+        public string XUACompatible { get; set; }
 
-    [JsonProperty("og:locale")]
-    public string oglocale { get; set; }
+        [JsonProperty("360-site-verification")]
+        public string 360siteverification { get; set; }
 
-    [JsonProperty("og:locale:alternate")]
-    public string oglocalealternate { get; set; }
+        [JsonProperty("fb:app_id")]
+        public string Fbappid { get; set; }
 
-    [JsonProperty("og:title")]
-    public string ogtitle { get; set; }
+        [JsonProperty("msvalidate.01")]
+        public string Msvalidate01 { get; set; }
 
-    [JsonProperty("og:type")]
-    public string ogtype { get; set; }
+        [JsonProperty("referrer")]
+        public string Referrer { get; set; }
 
-    [JsonProperty("og:description")]
-    public string ogdescription { get; set; }
+        [JsonProperty("y_key")]
+        public string Ykey { get; set; }
 
-    [JsonProperty("og:determiner")]
-    public string ogdeterminer { get; set; }
+        [JsonProperty("google-site-verification")]
+        public string Googlesiteverification { get; set; }
 
-    [JsonProperty("og:site_name")]
-    public string ogsitename { get; set; }
+        [JsonProperty("google-adsense-account")]
+        public string Googleadsenseaccount { get; set; }
 
-    [JsonProperty("og:image")]
-    public string ogimage { get; set; }
+        [JsonProperty("yandex-verification")]
+        public string Yandexverification { get; set; }
 
-    [JsonProperty("og:image:secure_url")]
-    public string ogimagesecureurl { get; set; }
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-    [JsonProperty("og:image:type")]
-    public string ogimagetype { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("og:image:width")]
-    public string ogimagewidth { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-    [JsonProperty("og:image:height")]
-    public string ogimageheight { get; set; }
-
-    [JsonProperty("twitter:title")]
-    public string twittertitle { get; set; }
-
-    [JsonProperty("twitter:description")]
-    public string twitterdescription { get; set; }
-
-    [JsonProperty("twitter:image")]
-    public string twitterimage { get; set; }
-
-    [JsonProperty("twitter:image:alt")]
-    public string twitterimagealt { get; set; }
-
-    [JsonProperty("twitter:card")]
-    public string twittercard { get; set; }
-
-    [JsonProperty("twitter:site")]
-    public string twittersite { get; set; }
-
-    [JsonProperty("twitter:site:id")]
-    public string twittersiteid { get; set; }
-
-    [JsonProperty("twitter:url")]
-    public string twitterurl { get; set; }
-
-    [JsonProperty("twitter:account_id")]
-    public string twitteraccountid { get; set; }
-
-    [JsonProperty("twitter:creator")]
-    public string twittercreator { get; set; }
-
-    [JsonProperty("twitter:creator:id")]
-    public string twittercreatorid { get; set; }
-
-    [JsonProperty("twitter:player")]
-    public string twitterplayer { get; set; }
-
-    [JsonProperty("twitter:player:width")]
-    public string twitterplayerwidth { get; set; }
-
-    [JsonProperty("twitter:player:height")]
-    public string twitterplayerheight { get; set; }
-
-    [JsonProperty("twitter:player:stream")]
-    public string twitterplayerstream { get; set; }
-
-    [JsonProperty("twitter:app:name:iphone")]
-    public string twitterappnameiphone { get; set; }
-
-    [JsonProperty("twitter:app:id:iphone")]
-    public string twitterappidiphone { get; set; }
-
-    [JsonProperty("twitter:app:url:iphone")]
-    public string twitterappurliphone { get; set; }
-
-    [JsonProperty("twitter:app:name:ipad")]
-    public string twitterappnameipad { get; set; }
-
-    [JsonProperty("twitter:app:id:ipad")]
-    public string twitterappidipad { get; set; }
-
-    [JsonProperty("twitter:app:url:ipad")]
-    public string twitterappurlipad { get; set; }
-
-    [JsonProperty("twitter:app:name:googleplay")]
-    public string twitterappnamegoogleplay { get; set; }
-
-    [JsonProperty("twitter:app:id:googleplay")]
-    public string twitterappidgoogleplay { get; set; }
-
-    [JsonProperty("twitter:app:url:googleplay")]
-    public string twitterappurlgoogleplay { get; set; }
-
-    [JsonProperty("headings")]
-    public headings[] headings { get; set; }
-
-    [JsonProperty("imgTags")]
-    public imgTags[] imgTags { get; set; }
-
-    [JsonProperty("responseBody")]
-    public string responseBody { get; set; }
-
-    [JsonProperty("viewport")]
-    public string viewport { get; set; }
-
-    [JsonProperty("X-UA-Compatible")]
-    public string xUACompatible { get; set; }
-
-    [JsonProperty("360-site-verification")]
-    public string 360siteverification { get; set; }
-
-    [JsonProperty("fb:app_id")]
-    public string fbappid { get; set; }
-
-    [JsonProperty("msvalidate.01")]
-    public string msvalidate01 { get; set; }
-
-    [JsonProperty("referrer")]
-    public string referrer { get; set; }
-
-    [JsonProperty("y_key")]
-    public string ykey { get; set; }
-
-    [JsonProperty("google-site-verification")]
-    public string googlesiteverification { get; set; }
-
-    [JsonProperty("google-adsense-account")]
-    public string googleadsenseaccount { get; set; }
-
-    [JsonProperty("yandex-verification")]
-    public string yandexverification { get; set; }
-
-}
-
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
